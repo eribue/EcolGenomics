@@ -1,4 +1,4 @@
-# Title  
+# Ecological genomics notebook  
 
 ## Author: Erika Bueno  
 ### Affiliation: UVM
@@ -106,7 +106,7 @@
 
 
 ### Entry 1: 2020-01-13, Monday.   
-##Take homes:
+##Info sessions on 
 
 ------    
 <div id='id-section2'/>   
