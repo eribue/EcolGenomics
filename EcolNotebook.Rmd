@@ -1,7 +1,9 @@
+
+
 # Ecological Genomics Notebook  
 
 ## Author: Erika Bueno  
-### Affiliation: UVM
+### Affiliation: University of Vermont
 ### E-mail contact: embueno@uvm.edu
 
 
@@ -104,7 +106,57 @@
 <div id='id-section1'/>   
 
 ### Entry 1: 2020-01-13, Monday.   
-##Info sessions on 
+
+Today we discussed the definition of Ecological genomics and how it relates to the history of population genetics. Specifically, I learned about the founders of population genetics (Seawall Wright, R.A. Fisher, J.B.S. Haldane) and their contributions to the field. For example, Wright's island model is used to predict how subpopulations "represented by islands" may behave assuming population size is the same and always stable (don't grow or decline).
+
+![Image result for wright's island model](https://www.ucl.ac.uk/~ucbhdjm/courses/b242/MigEvol/OneIsland.gif)
+
+Notes: Key points from lecture
+
+Fixation coefficient (Fst)- a measure differentiation among populations. 
+
+* Fst values range from 0-1
+  * High Fst value close to 1 infer that the population is highly differentiated (high variability) 
+  * Values closer to 0 infer low differentiation
+  * High values are associated with less migration (gene flow) and non-random mating
+
+Selection sweeps- occurs when an allele becomes more frequent in the population- we can infer that this allele confers a beneficial trait.
+
+Molecular evolution- "history encoded in DNA" can be examined at different levels
+
+1. Populations
+2. Organisms
+3. Species
+
+Kimura's Neutral Theory of Molecular Evolution- estimates the probability of a new mutation in a population (N)
+$$
+1/2N= μ
+$$
+Synonymous vs non-synonymous mutations-
+
+* Synonymous mutations- does not alter the amino acid in the protein
+
+* Non-synonymous mutations- alters the amino acid in the protein
+  $$
+  dN/dS
+  $$
+  N mutations/non syn. sites/ N of syn./ N of syn sites
+
+  w= dN/dS 
+
+  w>>1 or w>2 signal for positive selection
+
+  w = 1 neutral
+
+  w<< 1 negative "purifying selection"
+
+Tajima's D-  𝜋 /s
+
+ratio of nucleotide diversity ( 𝜋 )
+
+no. of segregating sites (s)
+
+High  𝜋  with rare variants in population
 
 ------
 <div id='id-section2'/>   
