@@ -158,11 +158,6 @@ no. of segregating sites (s)
 
 High  𝜋  with rare variants in population
 
-------
-<div id='id-section2'/>   
-
-### Entry 2: 2020-01-14, Tuesday.   
-
 
 
 ------
@@ -173,65 +168,14 @@ High  𝜋  with rare variants in population
 
 
 ------
-<div id='id-section4'/>   
-
-### Entry 4: 2020-01-16, Thursday.   
-
-
-
-------
-<div id='id-section5'/>   
-
-### Entry 5: 2020-01-17, Friday.   
-
-
-
-------
-<div id='id-section6'/>   
-
-### Entry 6: 2020-01-20, Monday.   
-
-
-
-------
-<div id='id-section7'/>   
-
-### Entry 7: 2020-01-21, Tuesday.   
-
-
-
-------
 <div id='id-section8'/>   
 
 ### Entry 8: 2020-01-22, Wednesday.   
-
-
-
-------
-<div id='id-section9'/>   
-
-### Entry 9: 2020-01-23, Thursday.   
-
-
-
-------
-<div id='id-section10'/>   
-
-### Entry 10: 2020-01-24, Friday.   
-
-
 
 ------
 <div id='id-section11'/>   
 
 ### Entry 11: 2020-01-27, Monday.   
-
-
-
-------
-<div id='id-section12'/>   
-
-### Entry 12: 2020-01-28, Tuesday.   
 
 
 
