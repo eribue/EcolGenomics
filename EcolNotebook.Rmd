@@ -165,12 +165,212 @@ High  𝜋  with rare variants in population
 
 ### Entry 3: 2020-01-15, Wednesday.   
 
+Lecture notes: How do the questions tie in with the technology?
 
+Things to consider: type organism/sample (tissue, environment, DNA, RNA)
+
+Does the organism have a reference genome? How large is the genome? 
+
+**Library preps**
+
+1. **Whole-genome sequencing**
+
+2. **RNAseq**
+
+3. **Exome Capture**-  not a measurement of expression; focused on examining variation
+
+   Exon- protein coding regions in DNA
+
+   Exome - portion of the genome that codes for exons
+
+   Biomedical uses- disease causing variants/rare diseases
+
+   Ecological and evolutionary- genetic mapping of phenotypic traits, IDing causing variants, detecting selection in a genome
+
+   Cost effective and allows one to beyond model taxa
+
+   Information on life history strategies and molecular markers for evolution
+
+   **Library prep:**
+
+   1. Sample collection
+   2. Fragmentation- "fragmented soup" blunt ends created, fragments same length, adenine tails added
+   3. Enrichment of libraries- pull DNA and add probes 
+      1. PCR- good for 100s loci, low cost, per probe cost is high
+      2. De novo- good 100-1000 loci, high cost, per probe cost intermediate
+      3. Divergent annotated genome- good for 100-1000s loci, cost per probe low,
+   4. Purification
+   5. Quality control
+
+4. **RAD/GBS:** 
+
+   RADseq: restriction site associated DNA seq.
+
+   ​	Uses APK1- enzyme (restriction enzyme "cuts" palindromic sites) allows for barcode attachment
+
+   Library prep:
+
+   1. Genomic DNA
+   2. Digest with 1 restriction enzyme
+   3. Ligate adapters to fragments
+   4. Multiplex (pool) samples
+   5. PCR- allele drop-off issues-> PCR amplification does not work or cut site because of an existing variant thus reducing the amount of DNA being seq.
+
+5. **Amplicon seq**- sequencing singular fragment of DNA- often highly conserved
+
+   1. 16s RNA for bacteria
+   2. ITS for fungi
+   3. CO1 for animals
+
+   **Library prep**
+
+   1. DNA isolation
+   2. PCR - amplify product of interest
+   3. Add adapters- for barcoding
+   4. Sequence
+
+6. **Bisulfite seq: Identifies  methylated C's in genome.** 
+
+   CG islands: GCGCGCGC - usually in non-coding DNA or promoter regions of a gene
+
+   Library prep:
+
+   1. Isolate DNA
+   2. Treatment with bisulfite- converts methylated cytosine with a uracil
+   3. PCR- amplify 
+   4. Sequence treated samples
+   5. Compare to untreated samples
+
+CHIPseq: chromatin immunoprecipitation
+
+Library prep:
+
+1. Add fixative to fix all proteins attached to DNA
+2. Immunoprecipitation: introduce an antibody that is specific to protein of interest
+3. Sequence- data tells you where histone modifications are located
+
+ATAC seq: Chromatin accesibility
+
+"Tagementation": tagging probes + fragmenting DNA
+
+1. Introduce a manufactured TE to fragment DNA
+2. Load fragments into sequencer 
+3. (HiSeq)
+4. Global 3-D shape of the genome- crosslinks all touching DNA, only fragment those crosslinked DNA
+
+**Sequencing platforms**
+
+Illumina- for short read sequencing
+
+sequencing: decoding nucleotide molecules
+
+NGS- faster and cheaper
+
+* Four step process:
+  	1. Library prep: DNA fragmentation, attaching adapters
+   	2. Cluster generation: lawn- contains complementary adapters + DNA polymerase + bases (ATCG) = creates clusters
+   	3. Sequencing by synthesis: oligo's + fluorescent dNTPs = fluorescent signal is measured by the machine
+   	4. Data analysis: filtering and mapping to reference genome
+
+PacBio/Nanopore- long read sequencing
+
+Long read seq: 
+
+```mermaid
+graph TD
+A(<b> Long read seq)
+B(<b>SMART)
+C(<b>Synthetic)
+A --> B
+A --> C
+B --> D(PacBio Oxford Nanopore Technology)
+C --> E(Illumina)
+C --> F(OX Genomics)
+
+```
+
+PacBio- small well set up where single DNA fragment foes in and polymerized
+
+* dNTPs + fluorophores -> lasers and camera
+
+Synthetic- wells (Illumina) vs emulsion based (OX genomics)
 
 ------
 <div id='id-section8'/>   
 
 ### Entry 8: 2020-01-22, Wednesday.   
+
+**Population genomics**
+
+​	Why is it used? allows one to infer selection and drift across the genome
+
+-Population genetics does not incorporate the genomic landscape and structure
+
+-The effects of environmental changes can be tracked via changes in abundance and distribution (demographics) as well as changes in selection pressures- "potential to adapt"
+
+Challenges: teasing apart demographic history from effects of selection
+
+Why do population genomics?
+
+-genomic environment is inherently variable
+
+-allows one to statistically capture the variation with dense sequencing
+
+-population genetic approaches miss out total variation because of limited sampling
+
+**Linkage disequilibrium**- caused by physical distance due to crossover events
+
+1) **genomic context:** selection acts on the genome locally while drift acts on the genome globally
+
+* mean and distribution used to infer drift and small population size
+
+* outliers allows one to infer selection
+
+* small population size and drift act on the entire genome
+
+**2) Demographic history**
+
+Ne- effective population size
+
+* behaves as a Wright-Fisher population
+* idealized population; every individual has same probability of mating
+* migration (gene flow) among populations (groups of individuals exchanging genes)
+* divergence - times between populations
+
+**Coalescent theory**- probability of allele copies share a common ancestor
+
+2N allele copies in a population of Ne individuals
+
+1/2Ne= probability of a common ancestor
+
+* stochastic process- sample multiple alleles copies not just one to tease out variability
+* MRCA- Most recent common ancestor of all allele copies
+* Population bottlenecks change the rate coalescent events 
+* Rate speeds up during population bottlenecks and slows down with expansion
+* inferring drift based on models of coalescence
+* adding mutations to find derived alleles in population
+
+Bottlenecks- loose rare alleles and maintain common ones
+
+Site frequency spectrum (SFS)- histogram of allele frequencies for many SNPs in a population
+
+3) **Selection**- positive selection increases frequency of beneficial allele/variant
+
+* nucleotide diversity- average pairwise differences between individuals
+* low nucleotide diversity under positive selection
+* linkage measures- increase near selected sites due to genetic hitchhiking
+* cause exact same expansion in tree "bushy trees" as bottleneck but only locally- selective sweep
+
+```mermaid
+graph TD
+
+A(<b>Common ancestor)
+B(<b> sample A)
+C(<b> sample B)
+A --> B
+A --> C
+
+```
 
 ------
 <div id='id-section11'/>   
