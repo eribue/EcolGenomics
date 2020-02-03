@@ -537,7 +537,7 @@ do
         TRAILING:20 \
         SLIDINGWINDOW:6:20 \
         MINLEN:35
-        
+
 escape + :wq  #escaping vim mode
 
 `bash trim_loop.sh ` #runs the program
@@ -550,7 +550,57 @@ location of cleaned reads:
 
 ------
 <div id='id-section16'/>   
-### Entry 16: 2020-02-03, Monday.   
+### Entry 16: 2020-02-03, Monday.  
+
+Paper:
+
+Notes:
+
+**Fst**- a measure of genetic structure developed by Sewall Wright (1969, 1978). Related to statistical analysis of variance (*ANOVA)* 
+
+[Source]: https://www.uwyo.edu/dbmcd/popecol/maylects/popgengloss.html
+
+*F*ST is the proportion of the total genetic variance contained in a subpopulation (the S subscript) relative to the total genetic variance (the *T* subscript). 
+
+* Values can range from 0 to 1. High *F*ST implies a considerable degree of differentiation among populations.
+
+**Selective Sweeps -** When a new beneficial mutation is positively selected for and a reduction or elimination of variation is observed as a result. 
+
+* Hard sweep- typically result from rapid emergence of mutations. 
+* Soft sweeps are a result of selection on a allele that is carried by multiple individuals in a population.
+
+**Admixture**: Gene flow between two populations that are genetically differentiated, involves gene flow in both directions. Admixture can be plotted with a population structure plot, which allows one to identify the number of genetically differentiated groups in a population and the amount of admixture between the groups.
+
+**Tajima’s D** (aka as a neutrality test) is commonly used in population genetics to determine whether a DNA sequence evolved from random processes (mutation and genetic drift) or through non-random processes (i.e. directional selection, genetic hitchhiking, introgression, etc.). It is calculated by subtracting the difference between the observed variation and the expected variation in a population. 
+
+* A negative Tajima’s D means that genetic variation is being reduced through population expansion (i.e. recovering from small pop size) or a selective sweep (decreases variation). 
+* A positive Tajima’s D suggests that genetic variation is being maintained by balancing selection or a recent population contraction.
+
+Info session notes: Genomic diversity 
+
+Effective population size: size of an ideal population that conforms to Wright-Fisher assumptions.
+
+* Factors deviating Ne from N
+
+  * non-random mating, unequal sex ratio, selection, reproductive skew, constant population size
+
+* Seawall Wright Ne= 4Nmales x Nfemales/ Nmales + Nfemales (founded upon this equation on sex ratios)
+
+* can be estimated by pie = Ne*u (net probability of Ne times mutation rate)
+
+* mutation rate-units change per time per generation
+
+* Nei's genetic distance- measurement of diversity
+
+* Fst- population structure- 1/ pie +1 or 1 - avg H of subpop/ H for whole pop (H - heterozygosity)
+
+* Site frequency spectrum- number of individuals (frequency) plotted against number of differentiated SNPS (polymorphisms) 
+
+  ![](https://s3-eu-west-1.amazonaws.com/ppreviews-plos-725668748/1170708/preview.jpg)
+
+Frequency of rare alleles in a population. With population expansion, Ne increases, and the frequency of rare alleles will increase in a few number of individuals.
+
+Fst = 1- pieS/pieT
 
 
 
@@ -611,12 +661,6 @@ location of cleaned reads:
 ------
 <div id='id-section28'/>   
 ### Entry 28: 2020-02-19, Wednesday.   
-
-
-
-------
-<div id='id-section29'/>   
-### Entry 29: 2020-02-20, Thursday.   
 
 
 
