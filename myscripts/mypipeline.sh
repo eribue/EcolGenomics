@@ -14,5 +14,13 @@ output="/data/project_data/RS_ExomeSeq/mapping"
 
 source ./mapping.sh 
 
+#run the post processing steps
+
+source ./process_bam.sh
+
+
+
+
+
 
 
