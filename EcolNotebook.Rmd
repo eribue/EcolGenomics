@@ -608,11 +608,44 @@ Fst = 1- pieS/pieT
 <div id='id-section18'/>   
 ### Entry 18: 2020-02-05, Wednesday.  
 
-Notes:
+Notes: 
+
+Start mapping each set of cleaned reads to ref genome
+
+* viz sequence alignments files
+* process sam files
+  * converting to bam  format and sorting by coords
+  * removing PCR dups
+  * indexing for fast future lookup
+
+Calculate mapping statistics to assess quality of the results
+
+Learn how to put separate bash scripts into a "wrapper" that runs them all
+
+Ref genome: from norway spruce- close relative to red spruce
+
+* wget- to download file remotely from internet
+
+* created a reduced reference genome containing all contigs since genome size is too large 
+
+* the order of the contigs are not ordered to chromosome
+
+* N50:  how far do you go to count up to 50% of the all contigs- represents the sum of all contigs that give half of the assembled genome
+  * assessment measurement of the assembly "quality"
+
+Wrapper- 
+
+mapping- alignment to ref genome
+
+* bwa program: algorithm for mapping reads to refs
+
+  `bwa mem -t 1 -M ${ref} ${forward} > ${output}/BWA/${name}.sam`
+
+  
 
 
 
- 
+ ` code` 
 
 ------
 <div id='id-section21'/>   
