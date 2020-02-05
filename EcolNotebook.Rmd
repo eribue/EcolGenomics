@@ -606,15 +606,13 @@ Fst = 1- pieS/pieT
 
 ------
 <div id='id-section18'/>   
-### Entry 18: 2020-02-05, Wednesday.   
+### Entry 18: 2020-02-05, Wednesday.  
+
+Notes:
 
 
 
-------
-<div id='id-section20'/>   
-### Entry 20: 2020-02-07, Friday.   
-
-
+ 
 
 ------
 <div id='id-section21'/>   
@@ -623,40 +621,12 @@ Fst = 1- pieS/pieT
 
 
 ------
-<div id='id-section22'/>   
-### Entry 22: 2020-02-11, Tuesday.   
-
-
-
-------
 <div id='id-section23'/>   
-### Entry 23: 2020-02-12, Wednesday.   
-
-
-
-------
-<div id='id-section24'/>   
-### Entry 24: 2020-02-13, Thursday.   
-
-
-
-------
-<div id='id-section25'/>   
-### Entry 25: 2020-02-14, Friday.   
-
-
+### Entry 23: 2020-02-12, Wednesday
 
 ------
 <div id='id-section26'/>   
-### Entry 26: 2020-02-17, Monday.   
-
-
-
-------
-<div id='id-section27'/>   
-### Entry 27: 2020-02-18, Tuesday.   
-
-
+### Entry 26: 2020-02-17, Monday.
 
 ------
 <div id='id-section28'/>   
