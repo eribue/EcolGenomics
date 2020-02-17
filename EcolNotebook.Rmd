@@ -633,9 +633,13 @@ Ref genome: from norway spruce- close relative to red spruce
 * N50:  how far do you go to count up to 50% of the all contigs- represents the sum of all contigs that give half of the assembled genome
   * assessment measurement of the assembly "quality"
 
-Wrapper- 
+Wrapper- all scripts together
 
-mapping- alignment to ref genome
+mypipeline.sh-
+
+mapping.sh- alignment to ref genome
+
+process_bam.sh 
 
 * bwa program: algorithm for mapping reads to refs
 
@@ -643,19 +647,95 @@ mapping- alignment to ref genome
 
   
 
+  detaching for run 
 
+  `screen`
 
- ` code` 
+  `bash mypipeline.sh`
 
-------
-<div id='id-section21'/>   
+  CtrlA + ctrlD #to detach
+
+  screen -r #to go back to screen
+
+  
+
+  
+
 ### Entry 21: 2020-02-10, Monday.   
 
+GWAS- genome association studies
+
+* First performed in 2002
+* rare variants mapped to SNPs in the genome
+  * e.g. diabetes, parkinsons, and heart abnormalities
+
+Manhattan plots- SNP's mapped across the genome (chromosomes)
+
+	 * statistically sig SNPs are shown above the log10(p-value )line
+	 * spatial auto-correlations between SNP's 
+
+Methodology- finding populations that differ in a singular traits and sequencing genome to map those traits to SNP's
+
+1. Allows one to find causal impacts of genetic variance
+
+2. close to causal SNPs - linkage disequilibrium- genes associated to variant due to spatial linkage on the chromosome
+
+3. population bias - based only population sampled
+
+   Challenges:
+
+   SNP's are not genes
+
+   low heritability of traits- distinctions can become unclear
+
+   ancestral association- bigger issue when population size (population demographics) is small - less recombination- more homogeneous genetic makeup
+
+   population structure- fitting the data; removing the variability to see if the remaining vars explain the patterns seen
+
+   lambda=Median empirically observed/median empirically expected
+
+   Ecological source of error- 
+
+   ​	methodology is different
+
+   ​	correlated traits- principal component analysis
+
+   ​	trait structure extrapolation- causal SNP and phenotype;   when effective size and allele frequencies are high
+
+   Significance threshold- competition between accuracy and broadness
+
+   
 
 
 ------
 <div id='id-section23'/>   
 ### Entry 23: 2020-02-12, Wednesday
+
+`head CRA_01.sam` - first 10 lines in the file (name of headers followed by the length of the mapped read)
+
+`tail CRA_01.sam` - sam format info on wiki
+
+Quality score check on- https://broadinstitute.github.io/picard/explain-flags.html, enter the quality score i.e. 147 and check for failed mapping 
+
+`MA_10131732` contig in the genome that the read mapped to
+
+mapping quality is numerical phred score- higher scores are better
+
+writing a loop to generate all statistical info on mapped reads
+
+filename sorted.rmdup.bam  (.bai preferred input file)
+
+`samtools tview /data/project_data/RS_ExomeSeq/mapping/BWA/CRA_01.sorted.rmdup.bam /data/project_data/RS_ExomeSeq/ReferenceGenomes/Pabies1.0-genome_reduced.fa`
+
+ANGSD- provide SNP freq. to create a SFS and then calc diversity metrics pi, theta, and Tajimas' d
+
+output is always a list of bam files
+
+to check if files are there after running angsd
+
+ll in the angsd folder
+
+
 
 ------
 <div id='id-section26'/>   
