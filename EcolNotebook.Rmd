@@ -706,7 +706,6 @@ Methodology- finding populations that differ in a singular traits and sequencing
 
    
 
-
 ------
 <div id='id-section23'/>   
 ### Entry 23: 2020-02-12, Wednesday
@@ -738,18 +737,30 @@ ll in the angsd folder
 
 
 ------
-<div id='id-section26'/>   
-### Entry 26: 2020-02-17, Monday.
+<div id='id-section26'/>  
 
-------
 <div id='id-section28'/>   
 ### Entry 28: 2020-02-19, Wednesday.   
 
 
 
-------
-<div id='id-section30'/>   
-### Entry 30: 2020-02-21, Friday.   
+folding the SFS- taking the midpoint of the bins in the SFS plot and "fold" the SFS over each other 
+
+folded spectra: minor allele frequency (rare alleles)
+
+Estimating rough SFS
+
+Refine SFS using the first run as a prior
+
+doTheta (parameter for population diversity) 
+
+theta= 4NEu
+
+human readable stats- theta_stats
+
+
+
+
 
 
 
