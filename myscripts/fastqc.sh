@@ -3,12 +3,12 @@
 
 
 cd ~/EcolGenomics/myresults/
-mkdir fastqcleaned
+mkdir fastqclean
 
-for file in /data/project_data/RS_RNASeq/fastq/MMF*C*.fastq.gz
+for file in /data/project_data/RS_RNASeq/fastq/cleanreads/LOL*H*.cl.fq
 
 do
 
-fastqc ${file} -o fastqcleaned
+fastqc ${file} -o fastqclean
 
 done
