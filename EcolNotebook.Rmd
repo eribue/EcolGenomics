@@ -889,23 +889,112 @@ MMF- C
 
 
 
-
-
-------
-<div id='id-section34'/>   
-### Entry 34: 2020-02-27, Thursday.   
-
-
-
-------
-<div id='id-section35'/>   
-### Entry 35: 2020-02-28, Friday.   
-
-
-
 ------
 <div id='id-section36'/>   
-### Entry 36: 2020-03-02, Monday.   
+### Entry 36: 2020-02-02, Monday.   
+
+Differential gene expression
+
+1. The what, why, how?
+
+   1. What is differential expression? Differences in transcript abundance between experimental groups/populations
+   2. * specific genes that are changing
+   3. Why?? Genotype to phenotype
+   4. * P= E + G + E*G (controlled environment)
+   5. How? Sample prep --> RNA extraction--> Library prep --> Sequencing
+      1. QC assessment (FastQC and trimming)
+      2. Mapping with bwa mem and counting with salmon
+
+2. Normalization
+
+   1. Data matrix gene count table
+
+      * genes in each row   
+
+        ​			Sample 1 		Sample 2    Sample 3
+
+        gene 1    120			   60                  22
+
+        gene 2    50				25				   9
+
+        gene 3 	75				37			     14
+
+        gene 4 	0		 		0			   	 200
+
+        tot			245			122				245
+
+      * normalization addresses problems with depth and library size 
+
+      * and library composition- correcting for overly abundant genes 
+
+      * Normalization methods- counts per million (CPM)- only accounting for sequencing depth
+
+      * Transcripts per kilobase million- accounts for depth and gene length
+
+      * Fragment per kilobase million-  accounts for depth and gene length
+
+      * edgeR- popular normalization method accounting for depth, gene length, and library composition
+
+      * DESeq2- accounting for depth and composition
+
+DESeq2- logs transform abundance values and average them per gene then take ratio of log transformed values and use  median ratios to calculate the scaling factor
+
+provides a scaling factor for each sample
+
+divide each gene in the sample by the scaling factor
+
+4. Differential Expression
+
+* challenges: large data set ~20,000 tests --> 100 false positives
+* false negatives - overlapping distributions analyzes as different
+* Overcoming challenges with independent filtering
+  * Limiting the # of tests- based on a cutoff called a baseMean
+  * 
+  * Correction for multiple tests- Benjamin Hochberg (BH)
+    * generates an adjusted p-value to control for false positives known as FDR-false discovery rate
+* DESeq2- runs a generalized linear model with a negative binomial distribution  followed by Wald's test- providing adj. p-values
+
+Statistical models- 
+
+expression ~ time + Sourceclim + time*sourceclime 
+
+how well do these factors predict expression?
+
+1. Visualization
+
+Viz the normalization plots- Sequencing summary statistics
+
+barplots- of total read counts across samples
+
+no. of null genes across samples
+
+normalized counts vs samples- plotting the median values in box plot
+
+PCA- clustering by experimental groups- PC1 and PC2 (Identify the factors describing the variation across samples)
+
+Heatmap- genes (rows) vs samples (columns) - expression levels
+
+Hierarchical clustering- by genes "behaving" similarly
+
+Venn diagrams- number of DE genes (up or down regulated) separated by sample type
+
+MA plot- log fold change vs log mean expression- significant points plotted - allows you to ID which genes are up or down regulated depending if they are above or below x axis
+
+Volcano plots- - log of p-value vs log fold change - anything within the quadrants > than the log fold change are significantly expressed
+
+Individual gene treatment response curve
+
+RFC vs treatment 
+
+5. Enrichment analysis
+   * Functional database
+     * Gene ontology- GO; molecular function, bio process, cell compartment
+   * KEGG pathway- genetic information
+     * transcription
+       * spliceosome process
+   * Over representation analysis- which gene sets are over represented
+   * Gene set enrichment analysis
+     * usually LFC- are genes within the set clustered towards one end of the rank list
 
 
 
