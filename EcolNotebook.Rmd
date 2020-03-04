@@ -1,6 +1,6 @@
 
 
-# Ecological Genomics Notebook  
+#Title: Ecological Genomics Notebook  
 
 ## Author: Erika Bueno  
 ### Affiliation: University of Vermont

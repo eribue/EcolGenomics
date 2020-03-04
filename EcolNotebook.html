@@ -365,8 +365,7 @@ summary {
 </div>
 
 
-<div id="ecological-genomics-notebook" class="section level1">
-<h1>Ecological Genomics Notebook</h1>
+<p>#Title: Ecological Genomics Notebook</p>
 <div id="author-erika-bueno" class="section level2">
 <h2>Author: Erika Bueno</h2>
 <div id="affiliation-university-of-vermont" class="section level3">
@@ -383,7 +382,6 @@ summary {
 </div>
 <div id="project-descriptions" class="section level3">
 <h3>Project Descriptions:</h3>
-</div>
 </div>
 </div>
 <div id="table-of-contents" class="section level1">
@@ -954,7 +952,6 @@ git push</code></pre>
 <p>ll in the angsd folder</p>
 <hr />
 <div id="id-section26"></div>
-
 <div id="id-section28"></div>
 </div>
 <div id="entry-28-2020-02-19-wednesday." class="section level3">
@@ -971,31 +968,209 @@ git push</code></pre>
 </div>
 <div id="entry-31-2020-02-24-monday." class="section level3">
 <h3>Entry 31: 2020-02-24, Monday.</h3>
-<hr />
-<div id="id-section32"></div>
-</div>
-<div id="entry-32-2020-02-25-tuesday." class="section level3">
-<h3>Entry 32: 2020-02-25, Tuesday.</h3>
+<p><strong>Ecological genomics</strong></p>
+<p>Population genetics (p+q, coalescent theory) + molecular evolution (pi, theta, Fst, SFS) + ecology (biotic and abiotic) + NGS</p>
+<p>where does transcriptomics fit in the venn diagram?</p>
+<ul>
+<li>measuring gene expression in a <strong>controlled environmental</strong> setting to reveal g<strong>enetically controlled</strong> differences of <strong>phenotypes at the molecular level</strong></li>
+<li>what is a phenotype? characteristics of organisms that can be observed</li>
+<li>i.e. coat color (morphological), disease resistance/susceptibility (cellular and molecular level)</li>
+<li>Central dogma of molecular biology
+<ul>
+<li><pre><code>transcription       translation                     N.S. acts on the phenotype </code></pre></li>
+<li>DNA ———&gt; RNA —————-&gt; Protein = phenotype of interest</li>
+<li>reverse ecology- signatures from DNA to indicate the phenotypes</li>
+<li>transcriptomics: measures functional expression in route to a specific phenotype</li>
+</ul></li>
+<li>mutation - coding regions- protein functions- phenotype
+<ul>
+<li>splice site variation - intron exon</li>
+<li>promoter and enhancers affecting expression level in the cells and timing of expression or the cell/tissue type in which the gene is expressed, conditions of expression</li>
+<li>microRNA- modifications at the RNA level</li>
+</ul></li>
+<li>Proteins- post translational modifications i.e. phosphorylation</li>
+<li>Epigenetic modifications</li>
+<li>Benefits: active expression good link to phenotype, global/unbiased, illumina (cheap), de novo transcriptome</li>
+</ul>
+<p>P = G + E + G*E (-control E- hold it constant)</p>
+<p>Experimentally induce the phenotype of interest</p>
+<p>—–&gt; goal: molecular underpinnings of a phenotype</p>
+<p><strong>Question</strong>: what do you want to know/what’s your hypothesis? this will effect the factors</p>
+<p><strong>Factors</strong></p>
+<ul>
+<li>common gardens : controlling the environmental condition</li>
+<li>treatments or conditions: related to phenotype of interest</li>
+<li>what populations?</li>
+<li>tissue, cell, life history stage</li>
+<li>transgenerational environment</li>
+<li>sex of the organism and reproductive stage</li>
+</ul>
+<p>replication is important</p>
+<p>3 pops x 2 types x 5 reps = 30 samples</p>
+<p>Workflow</p>
+<ol style="list-style-type: decimal">
+<li>careful experimental design-
+<ul>
+<li>question, hypothesis, broad ’omics, a priori hypothesis</li>
+<li>Factors</li>
+</ul></li>
+<li>Experiment
+<ul>
+<li>sample tissues individuals</li>
+<li>save RNA
+<ul>
+<li>extract, prepare, sequence- whole mRNA sequencing or 3’ tag sequencing</li>
+</ul></li>
+</ul></li>
+<li>Process and analyze data
+<ul>
+<li>check quality –&gt; clean –&gt; check quality again</li>
+<li>map to reference transcriptome and extract count data (how many reads aligned to a particular gene?)</li>
+<li>normalization step</li>
+<li>count data matrix</li>
+<li>use factors to run statistical analysis i.e. ANOVA</li>
+<li>counts can be used to make reaction norms across different conditions
+<ul>
+<li>expression ~ treatment + family + treatment*family</li>
+</ul></li>
+</ul></li>
+<li>Integrate: GO, network analysis, identify gene correlations in expression, identify the function of correlated genes, generate diversity stats, integrate microbiome data, integrate with epigenetic and proteomic data, and environmental data</li>
+</ol>
 <hr />
 <div id="id-section33"></div>
 </div>
 <div id="entry-33-2020-02-26-wednesday." class="section level3">
 <h3>Entry 33: 2020-02-26, Wednesday.</h3>
-<hr />
-<div id="id-section34"></div>
-</div>
-<div id="entry-34-2020-02-27-thursday." class="section level3">
-<h3>Entry 34: 2020-02-27, Thursday.</h3>
-<hr />
-<div id="id-section35"></div>
-</div>
-<div id="entry-35-2020-02-28-friday." class="section level3">
-<h3>Entry 35: 2020-02-28, Friday.</h3>
+<p>RNA seq dataset</p>
+<p>purpose of this experiment was to sample red spruce genetic variation from sites that were polarized into cool &amp; wet vs. hot and dry based on historic climate</p>
+<p>quant.sf files generated by Salmon -&gt; inputted in DEseq2 for analysis and viz</p>
+<p>goal: to assess the gene expression responses of individuals from these habitats in response to experimental treatments of heat and heat+drought</p>
+<p>10 maternal families - 5 from hot and dry and 5 from cool and wet</p>
+<p>one year old seedlings-tissues harvested day 0, 5, and 10</p>
+<p>RNA extracted from whole seedlings (root, stem, leaves)</p>
+<p>aimed for 5 biol reps per treatment x sourceclim x day combo but day 5 had few RNA extractions that worked</p>
+<p>total N = 76 samples</p>
+<p>3’ tag sequencing- uses little amount of RNA (Cornell)</p>
+<p>Questions asked</p>
+<p>seedlings grown in a common garden</p>
+<p>Factors: Treatment (C, H, D)</p>
+<p>SourceClim ( CoolWet, HeatDry)</p>
+<p>Time (0, 5, 10 days)</p>
+<ol style="list-style-type: decimal">
+<li><p>Do different individuals differ in gene expression across treatment</p></li>
+<li><p>&quot; &quot; at different time points</p></li>
+</ol>
+<p>expression ~ Time + SourceClim + Treatment + Time*SourceClim + family</p>
+<p>expression ~ Time + SourceClim + Treatment + SourceClim*Treatment +family</p>
+<p>expression ~ Time + SourceClim + Treatment + SourceClim<em>Treatment </em>Time +family</p>
+<p>3 factor ANOVA (GLMM)</p>
+<p>‘cd /data/project_data/RS_RNASeq/fastq’</p>
+<p>my pops</p>
+<p>LOL- H</p>
+<p>MMF- C</p>
 <hr />
 <div id="id-section36"></div>
 </div>
-<div id="entry-36-2020-03-02-monday." class="section level3">
-<h3>Entry 36: 2020-03-02, Monday.</h3>
+<div id="entry-36-2020-02-02-monday." class="section level3">
+<h3>Entry 36: 2020-02-02, Monday.</h3>
+<p>Differential gene expression</p>
+<ol style="list-style-type: decimal">
+<li><p>The what, why, how?</p>
+<ol style="list-style-type: decimal">
+<li>What is differential expression? Differences in transcript abundance between experimental groups/populations</li>
+<li><ul>
+<li>specific genes that are changing</li>
+</ul></li>
+<li>Why?? Genotype to phenotype</li>
+<li><ul>
+<li>P= E + G + E*G (controlled environment)</li>
+</ul></li>
+<li>How? Sample prep –&gt; RNA extraction–&gt; Library prep –&gt; Sequencing
+<ol style="list-style-type: decimal">
+<li>QC assessment (FastQC and trimming)</li>
+<li>Mapping with bwa mem and counting with salmon</li>
+</ol></li>
+</ol></li>
+<li><p>Normalization</p>
+<ol style="list-style-type: decimal">
+<li><p>Data matrix gene count table</p>
+<ul>
+<li><p>genes in each row</p>
+<p>​ Sample 1 Sample 2 Sample 3</p>
+<p>gene 1 120 60 22</p>
+<p>gene 2 50 25 9</p>
+<p>gene 3 75 37 14</p>
+<p>gene 4 0 0 200</p>
+<p>tot 245 122 245</p></li>
+<li><p>normalization addresses problems with depth and library size</p></li>
+<li><p>and library composition- correcting for overly abundant genes</p></li>
+<li><p>Normalization methods- counts per million (CPM)- only accounting for sequencing depth</p></li>
+<li><p>Transcripts per kilobase million- accounts for depth and gene length</p></li>
+<li><p>Fragment per kilobase million- accounts for depth and gene length</p></li>
+<li><p>edgeR- popular normalization method accounting for depth, gene length, and library composition</p></li>
+<li><p>DESeq2- accounting for depth and composition</p></li>
+</ul></li>
+</ol></li>
+</ol>
+<p>DESeq2- logs transform abundance values and average them per gene then take ratio of log transformed values and use median ratios to calculate the scaling factor</p>
+<p>provides a scaling factor for each sample</p>
+<p>divide each gene in the sample by the scaling factor</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Differential Expression</li>
+</ol>
+<ul>
+<li>challenges: large data set ~20,000 tests –&gt; 100 false positives</li>
+<li>false negatives - overlapping distributions analyzes as different</li>
+<li>Overcoming challenges with independent filtering
+<ul>
+<li>Limiting the # of tests- based on a cutoff called a baseMean</li>
+<li></li>
+<li>Correction for multiple tests- Benjamin Hochberg (BH)
+<ul>
+<li>generates an adjusted p-value to control for false positives known as FDR-false discovery rate</li>
+</ul></li>
+</ul></li>
+<li>DESeq2- runs a generalized linear model with a negative binomial distribution followed by Wald’s test- providing adj. p-values</li>
+</ul>
+<p>Statistical models-</p>
+<p>expression ~ time + Sourceclim + time*sourceclime</p>
+<p>how well do these factors predict expression?</p>
+<ol style="list-style-type: decimal">
+<li>Visualization</li>
+</ol>
+<p>Viz the normalization plots- Sequencing summary statistics</p>
+<p>barplots- of total read counts across samples</p>
+<p>no. of null genes across samples</p>
+<p>normalized counts vs samples- plotting the median values in box plot</p>
+<p>PCA- clustering by experimental groups- PC1 and PC2 (Identify the factors describing the variation across samples)</p>
+<p>Heatmap- genes (rows) vs samples (columns) - expression levels</p>
+<p>Hierarchical clustering- by genes “behaving” similarly</p>
+<p>Venn diagrams- number of DE genes (up or down regulated) separated by sample type</p>
+<p>MA plot- log fold change vs log mean expression- significant points plotted - allows you to ID which genes are up or down regulated depending if they are above or below x axis</p>
+<p>Volcano plots- - log of p-value vs log fold change - anything within the quadrants &gt; than the log fold change are significantly expressed</p>
+<p>Individual gene treatment response curve</p>
+<p>RFC vs treatment</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Enrichment analysis
+<ul>
+<li>Functional database
+<ul>
+<li>Gene ontology- GO; molecular function, bio process, cell compartment</li>
+</ul></li>
+<li>KEGG pathway- genetic information
+<ul>
+<li>transcription
+<ul>
+<li>spliceosome process</li>
+</ul></li>
+</ul></li>
+<li>Over representation analysis- which gene sets are over represented</li>
+<li>Gene set enrichment analysis
+<ul>
+<li>usually LFC- are genes within the set clustered towards one end of the rank list</li>
+</ul></li>
+</ul></li>
+</ol>
 <hr />
 <div id="id-section37"></div>
 </div>
