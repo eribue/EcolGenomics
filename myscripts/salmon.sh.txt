@@ -1,11 +1,11 @@
 #!bin/bash
-output=/data/project_data/RS_RNASeq/salmon/cleanedreads
+cd /data/project_data/RS_RNASeq/fastq/cleanreads
 
-for ${file} in /data/data_project/RS_RNASeq/cleanedreads/LOL*C*.cl.fq
+for file in MMF*C*.cl.fq
 
 do
-
-	salmon quant -i /data/project_data/RS_RNASeq/ReferenceTranscriptome/Pabies_HC27_index -l A -r ${file} --validateMappings -o transcripts_quant
+echo "starting sample ${file}"
+	salmon quant -i /data/project_data/RS_RNASeq/ReferenceTranscriptome/Pabies_HC27_index -l A -r ${file} --validateMappings -o /data/project_data/RS_RNASeq/salmon/cleanedreads/${file}
 
 done
 
