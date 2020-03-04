@@ -1,6 +1,7 @@
 #!bin/bash
 cd /data/project_data/RS_RNASeq/fastq/cleanreads
 
+<<<<<<< HEAD
 for file in LOL*H*.cl.fq 
 
 do
@@ -8,6 +9,13 @@ do
 echo "starting sample ${file}"
 
 	salmon quant -i /data/project_data/RS_RNASeq/ReferenceTranscriptome/Pabies_HC27_index -l A -r ${file} --validateMappings -o transcripts_quant
+=======
+for file in MMF*C*.cl.fq
+
+do
+echo "starting sample ${file}"
+	salmon quant -i /data/project_data/RS_RNASeq/ReferenceTranscriptome/Pabies_cds_index -l A -r ${file} --validateMappings -o /data/project_data/RS_RNASeq/salmon/allmapping/${file}
+>>>>>>> 5e65547782af45c69ca71084d08c970a001af1ea
 
 done
 
