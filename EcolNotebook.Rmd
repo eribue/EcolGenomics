@@ -789,11 +789,11 @@ where does transcriptomics fit in the venn diagram?
 * Epigenetic modifications
 * Benefits: active expression good link to phenotype, global/unbiased, illumina (cheap), de novo transcriptome
 
-P = G + E + G*E (-control E- hold it constant)
+**P = G + E + G*E (-control E- hold it constant)**
 
 Experimentally induce the phenotype of interest
 
------> goal: molecular underpinnings of a phenotype
+**-----> goal: molecular underpinnings of a phenotype**
 
 **Question**: what do you want to know/what's your hypothesis? this will effect the factors 
 
@@ -1085,6 +1085,82 @@ RFC vs treatment
 ------
 <div id='id-section51'/>   
 ### Entry 51: 2020-03-23, Monday.   
+
+Notes: Brendan's info-session
+
+**Types of data:** 
+
+gene expression (counts-normalized by length)
+
+quantitative trait
+
+sequence data - FASTQ, SNPs, QTLs 
+
+​				measurements: pi, theta, AMOVA
+
+* Environmental data - stress exposure, temperature gradient, discrete measurements of environment or continuous measurements of environment
+
+* Gene copy number- a way to measure duplications or deleted genes
+
+* Alignment depth- relative to a reference genome
+
+* Common to remove CNVs that are overly represented
+
+* Functional enrichment (GO)- associating the genes with a hierarchy of functions
+
+* Chromatin state- accessible/ not accessible or specific histone modifications
+
+  What types of interactions are we interested in exploring?
+
+  -Expression counts with discrete factors (i.e. environment, stress treatment)
+
+  Chromatin state influences transcription access-- influencing expression
+
+  Requires observations for each combination of levels
+
+  Expression vs continuous factors-- population diversity, environmental gradients)
+
+  * requires acceptance of a model for 'missing' observations
+
+Expression vs physical space
+
+* approaches from spatial statistics :
+* variance of expression levels between two samples as a function of the distance from where they were collected
+* Expression GO terms- prelim step for detecting over or under represented genes?
+* Helps detangling causal relationships- helps build the story
+* Geno-phenotype mapping- change in gene/genes causes a change in trait
+* QTL-> trait mapping
+* GRN network- directed edges
+* DE in target node
+* Genotype networks:  istable phenotype
+
+Analysis 
+
+Expression vs discrete factors
+
+Two-way ANOVA: continuous var (exp)
+
+continuous ~ 2 + discrete factors and their interactions
+
+observations come from a regression- grand mean + independent effect of factor i + independent effect of factor j, interaction between factor i and factor j (non-additive effects) + error 
+
+ANCOVA- add "nuisance" var - adding a covariate in the analysis
+
+AMOVA- analysis of molecular variance
+
+Expression vs continuous
+
+correlation (p)
+
+linear or higher order regression 
+
+Pleiotropic effects- one gene multiple traits
+
+cis vs trans regulation
+
+![Image result for cis vs trans regulatory elements](https://d3i71xaburhd42.cloudfront.net/ca9da4bc517f6d278849ab363a2fab898a6c64c2/3-Figure2-1.png)
+
+
 
 
 
