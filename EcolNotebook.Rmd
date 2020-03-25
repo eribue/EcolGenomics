@@ -1164,15 +1164,70 @@ cis vs trans regulation
 
 
 
-------
-<div id='id-section52'/>   
-### Entry 52: 2020-03-24, Tuesday.   
-
 
 
 ------
 <div id='id-section53'/>   
 ### Entry 53: 2020-03-25, Wednesday.   
+
+Special topics epigenomics
+
+Epigenetics: Waddington in 1940's
+
+What is epigenetics? Changes to gene expression that are not due to changes in DNA sequence
+
+Stable, long term alternations in the transcriptional potential of a cell that are not necessarily heritable (NIH Epigenomics Roadmap)
+
+Why do we care?
+
+Understanding phenotypic variation-- what factors influence Vp?
+
+Vp= Vg + Ve + Vgxe
+
+Genetic variation influences epigenetic variation-- Richards et al 2017
+
+Persistence under environmental change
+
+* acclimation 
+
+* adaptation
+
+**How epigenetic variation influence phenotype is important**
+
+Mechanisms of epigenetics:
+
+* phosphorylation- post translational protein mods
+* non coding RNAs (microRNA)- silence and interfere with translation
+* small interfering interactions
+* histone modification- euchromatin DNA becomes accessible to TFs for expression- whats available for expression and what's not
+* DNA methylation- easiest to quantify-- important for gene expression and histone modification
+
+Functional consequences of methylation
+
+* at promoters/enhancers
+  * High methylation= repression of expression i.e. inhibit binding of TFs and recruit methylbinding proteins reducing the ability for TFs to bind and regulate expression
+  * At Chromatin structure- making DNA accessible
+
+* Intergenetic
+  * Silencing TEs, etc.
+* Gene body methylation (exon intron)- high methylation--> higher expression of genes
+  * at the gene body-- low methylated levels are more responsive to environmental change-- Dixon et al. 2016
+  * relationship between alternative splicing and gene body methylation
+  * methylation differs between species Fewng et al 2010
+
+**Bisulfite sequencing**
+
+* Fragmented DNA + sodium Na2-- converts from C to U
+* but when there is methylation the conversion doesn't happen and it remains a C after pcr amplification
+* what proportions of C's are methylated compared to unmethylated -- differential methylation
+
+Reduced representation BSeq
+
+MSPI RE- will cut regardless if there's methylation or not
+
+Spiking in E.coli- DNA as a control for conversion rates
+
+
 
 
 
